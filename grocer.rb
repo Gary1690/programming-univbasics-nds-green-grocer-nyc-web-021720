@@ -18,7 +18,7 @@ def consolidate_cart(cart)
     if cart_consolidation.detect {|i| i[:item] == item[:item] }
       cart_consolidation[:count]+=1
     else
-      cart_consolidation[:count] = 1
+      cart_consolidation<<item.merge({:count=>1})
     end
   end
 end
