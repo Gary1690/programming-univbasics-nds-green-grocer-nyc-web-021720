@@ -53,5 +53,7 @@ cart =[
   {:item => "RAMUNE", :price => 1.75, :clearance => false}
 ]
 cart_consolidation = []
-pp cart
+cart.each do |item|
+  pp item
+end
 pp cart_consolidation
