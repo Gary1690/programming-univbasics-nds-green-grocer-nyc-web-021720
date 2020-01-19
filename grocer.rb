@@ -54,6 +54,6 @@ cart =[
 ]
 cart_consolidation = []
 cart.each do |item|
-  pp item
+
 end
 pp cart_consolidation
