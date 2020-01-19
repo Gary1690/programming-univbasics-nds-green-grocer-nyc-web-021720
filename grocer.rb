@@ -54,9 +54,9 @@ cart =[
 ]
 cart_consolidation = []
 cart.each do |item|
-  if cart_consolidation.detect {|i| i[:item] == item[:item] }
-    cart_consolidation[:count]+=1
-  else
-    cart_consolidation<<item.merge({:count=>1})
-  end
+if cart_consolidation.detect {|i| i[:item] == item[:item] }
+  cart_consolidation[:count]+=1
+else
+  cart_consolidation<<item.merge({:count=>1})
 end
+pp cart_consolidation
