@@ -53,5 +53,5 @@ cart =[
   {:item => "RAMUNE", :price => 1.75, :clearance => false}
 ]
 cart_consolidation = []
-pp cart.lenght
+pp cart.length
 pp cart_consolidation
