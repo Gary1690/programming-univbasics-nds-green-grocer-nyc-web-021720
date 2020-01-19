@@ -13,6 +13,14 @@ def consolidate_cart(cart)
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
+  cart_consolidation = []
+  cart.each do |item|
+    if cart_consolidation.detect {|i| i[:item] == item[:item] }
+      cart_consolidation[:count]+=1
+    else
+      cart_consolidation[:count] = 1
+    end
+  end 
 end
 
 def apply_coupons(cart, coupons)
